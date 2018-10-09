@@ -5,6 +5,12 @@ using MagicalFX;
 [RequireComponent (typeof (Animator))]
 public class PlayerController : Character {
 
+    public float mana;
+    public float maxMana;
+    public float armor;
+    public float maxArmor;
+    public float maxDamage;
+
     public float speed;
     public GameObject skill1;
     public float skill1_Cooldown;
