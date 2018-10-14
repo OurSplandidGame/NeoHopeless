@@ -26,10 +26,7 @@ public class Rotate : MonoBehaviour {
 
     public void updateItemInfo(int id)
     {
-        Debug.Log(id);
         Item item = itemDatabase.getItemByID(id);
-        Debug.Log(item);
-        Debug.Log(item.itemName);
         front.GetComponent<Renderer>().material.mainTexture = item.itemIcon.texture;
         back.GetComponent<Renderer>().material.mainTexture = item.itemIcon.texture;
         front.GetComponent<Renderer>().material.SetTexture("_EmissionMap", item.itemIcon.texture);
