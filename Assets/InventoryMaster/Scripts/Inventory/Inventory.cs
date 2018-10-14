@@ -583,6 +583,7 @@ public class Inventory : MonoBehaviour
 
     public void addItemToInventory(int id)
     {
+        Debug.Log("Item added");
         for (int i = 0; i < SlotContainer.transform.childCount; i++)
         {
             if (SlotContainer.transform.GetChild(i).childCount == 0)

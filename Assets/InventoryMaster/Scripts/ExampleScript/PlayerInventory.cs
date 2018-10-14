@@ -276,6 +276,12 @@ public class PlayerInventory : MonoBehaviour
         //}
     }
 
+    public void addItemToInventory(int id)
+    {
+        mainInventory.addItemToInventory(id);
+        mainInventory.updateItemList();
+        mainInventory.stackableSettings();
+    }
 
 
     // Update is called once per frame

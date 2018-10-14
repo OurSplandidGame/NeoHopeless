@@ -66,6 +66,9 @@ public class PlayerController : Character {
         print(other.gameObject.tag);
         if(other.gameObject.tag == "Pickup")
         {
+            PlayerInventory playerInventory = gameObject.GetComponent<PlayerInventory>();
+            Rotate rotate = other.gameObject.GetComponent<Rotate>();
+            playerInventory.addItemToInventory(rotate.getItemId());
             Destroy(other.gameObject);
         }
     }

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Animal : AiCharacter
 {
-    public GameObject[] drops;
+    public GameObject dropObj;
+    public int[] dropItemIds;
     protected override void AnimAttack()
     {
         base.AnimAttack();
@@ -13,10 +14,12 @@ public class Animal : AiCharacter
 
     protected override void AnimDie()
     {
-        if(drops.Length > 0)
+        if(dropItemIds.Length > 0)
         {
-            int index = Random.Range(0, drops.Length - 1);
-            Instantiate(drops[index], transform.position, transform.rotation);
+            GameObject drop = Instantiate(dropObj, transform.position, transform.rotation);
+            Rotate rotate = drop.GetComponent<Rotate>();
+            int index = Random.Range(0, dropItemIds.Length - 1);
+            rotate.updateItemInfo(dropItemIds[index]);
         }
         
         base.AnimDie();

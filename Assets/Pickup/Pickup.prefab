@@ -354,6 +354,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb8b76dc38a76e4bb71ffa44a9b348b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  front: {fileID: 1322342828094122}
+  back: {fileID: 1885402921974348}
+  duration: 60
+  itemDatabase: {fileID: 11400000, guid: 964f317a23cc9f0418bb3778fccd8ebb, type: 2}
 --- !u!135 &135544464151515294
 SphereCollider:
   m_ObjectHideFlags: 1
